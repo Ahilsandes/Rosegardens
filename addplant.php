@@ -38,14 +38,25 @@ if ($_SESSION["role"]!="admin")
                         <div class="top-header-content d-flex align-items-center justify-content-between">
 
                             <div class="top-header-meta">
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="rosegardens@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: plantnursery@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="rosegardens@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: rosegardens@gmail.com</span></a>
 
                             </div>
 
                             <!-- Top Header Content -->
                             <div class="top-header-meta d-flex">
 
-                                <!-- Login -->
+                                <div class="login">
+                                    <a href="index.html"> <span>Home</span></a>
+                                </div>
+                                <div class="login">
+                                    <a href="about.html"> <span>About</span></a>
+                                </div>
+                                <div class="login">
+                                    <a href="shop.html"> <span>Shop</span></a>
+                                </div>
+                                <div class="login">
+                                    <a href="contact.html"> <span>Contact</span></a>
+                                </div>
                                 <div class="login">
                                     <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
                                 </div>
@@ -57,6 +68,9 @@ if ($_SESSION["role"]!="admin")
                 </div>
             </div>
         </div>
+        <div class="classynav">
+
+          </div>
 
         <!-- ***** Navbar Area ***** -->
         <div class="alazea-main-menu">
@@ -116,11 +130,11 @@ if ($_SESSION["role"]!="admin")
   <table class="table" >
     <tbody>
       <tr>
-        <th scope="row"><label for="pname">Plant_name:</label></th>
+        <th scope="row" style="color: green;"><label for="pname">Plant_name:</label></th>
         <td><input type="text" id="pname" name="Plant_name" class="form-control"></td>
       </tr>
       <tr>
-        <th scope="row"><label for="pcat">Plant_category:</label></th>
+        <th scope="row" style="color: green;"><label for="pcat">Plant_category:</label></th>
         <td>
           <select name="Plant_category" class="form-control">
             <option value="NULL" disabled selected>Choose one</option>
@@ -141,15 +155,15 @@ if ($_SESSION["role"]!="admin")
         </td>
       </tr>
       <tr>
-        <th scope="row"><label for="pdesc">Plant_description:</label></th>
+        <th scope="row"style="color: green;"><label for="pdesc">Plant_description:</label></th>
         <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
       </tr>
       <tr>
-        <th scope="row"><label for="pamt">Plant_amount:</label></th>
+        <th scope="row"style="color: green;"><label for="pamt">Plant_amount:</label></th>
         <td><input type="number" id="pamt" name="Plant_amount" class="form-control"></td>
       </tr>
       <tr>
-        <th scope="row"><label for="img">Image1:</label></th>
+        <th scope="row"style="color: green;"><label for="img">Image:</label></th>
         <td>
           <div class="input-group mb-3">
   <div class="input-group-prepend">
