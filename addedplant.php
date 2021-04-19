@@ -48,6 +48,23 @@ if(isset($_SESSION['id']))
                             </div>
 			    <!-- Top Header Content -->
                             <div class="top-header-meta d-flex">
+															<!-- Top Header Content -->
+	                            <div class="top-header-meta d-flex">
+
+	                                <div class="login">
+	                                    <a href="index.html"> <span>Home</span></a>
+	                                </div>
+	                                <div class="login">
+	                                    <a href="about.html"> <span>About</span></a>
+	                                </div>
+	                                <div class="login">
+	                                    <a href="shop.html"> <span>Shop</span></a>
+	                                </div>
+	                                <div class="login">
+	                                    <a href="contact.html"> <span>Contact</span></a>
+	                                </div>
+
+																  </div>
 
                                 <!-- Login -->
                                 <div class="login">

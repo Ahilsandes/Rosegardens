@@ -33,11 +33,34 @@
 
                             <!-- Top Header Content -->
                             <div class="top-header-meta d-flex">
+                              <!-- Top Header Content -->
+                              <div class="top-header-meta d-flex">
 
-                                <!-- Login -->
-                                <div class="login">
-                                    <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
-                                </div>
+                                  <div class="login">
+                                      <a href="index.html"> <span>Home</span></a>
+                                  </div>
+                                  <div class="login">
+                                      <a href="about.html"> <span>About</span></a>
+                                  </div>
+                                  <div class="login">
+                                      <a href="shop.html"> <span>Shop</span></a>
+                                  </div>
+                                  <div class="login">
+                                      <a href="contact.html"> <span>Contact</span></a>
+                                  </div>
+                                  <!-- Login -->
+                                  <div class="login">
+                                      <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                  </div>
+                                  <!-- Cart -->
+                                  <div class="cart">
+                                      <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
+                                  </div>
+
+
+                              </div>
+
+
 
 
                             </div>
@@ -104,7 +127,7 @@
   <table class="table table-striped" >
     <tbody>
       <tr>
-        <th scope="row"><label for="cname">category_name:</label></td>
+        <th scope="row" style="color: green;"><label for="cname">Category_name:</label></td>
         <td><input type="text" id="cname" name="cname" class="form-control"></td>
       </tr>
 

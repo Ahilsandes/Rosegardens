@@ -57,8 +57,13 @@ if ($_SESSION["role"]!="admin")
                                 <div class="login">
                                     <a href="contact.html"> <span>Contact</span></a>
                                 </div>
+                                <!-- Login -->
                                 <div class="login">
-                                    <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                    <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                </div>
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
                                 </div>
 
 
@@ -144,7 +149,7 @@ if ($_SESSION["role"]!="admin")
             $result = mysqli_query($con, $query);
             mysqli_close($con);
             if (!$result){
-              die("QUERY MOONCHI");
+              die("QUERY kittila");
             } else {
               while ($row = mysqli_fetch_array($result)){
                 echo "<option value=\"".$row['category_id']."\">".$row['category_name']."</option>";
@@ -158,6 +163,27 @@ if ($_SESSION["role"]!="admin")
         <th scope="row"style="color: green;"><label for="pdesc">Plant_description:</label></th>
         <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
       </tr>
+      <tr>
+        <th scope="row"style="color: green;"><label for="pdesc">Plant_height:</label></th>
+        <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row"style="color: green;"><label for="pdesc">Common name:</label></th>
+        <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row"style="color: green;"><label for="pdesc">Bloom time:</label></th>
+        <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row"style="color: green;"><label for="pdesc">Flower colour:</label></th>
+        <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
+      </tr>
+      <tr>
+        <th scope="row"style="color: green;"><label for="pdesc">Planting and care:</label></th>
+        <td><input type="text" id="pdesc" name="Plant_description" class="form-control"></td>
+      </tr>
+
       <tr>
         <th scope="row"style="color: green;"><label for="pamt">Plant_amount:</label></th>
         <td><input type="number" id="pamt" name="Plant_amount" class="form-control"></td>
