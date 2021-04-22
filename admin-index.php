@@ -54,6 +54,7 @@ if(isset($_SESSION['id']))
 																	Welcome
 
 																		<a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+																		<a href="change password.php"> Change password?</a>
                                 </div>
 
                             </div>
@@ -91,13 +92,19 @@ if(isset($_SESSION['id']))
 
                             <!-- Navbar Start -->
                             <div class="classynav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                <ul  style="  display: inline-block; margin: 0 10px;">
+                                    <li><a href="admin-index.php">Home</a></li>
 
-                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="addplant.php">Add Plants</a></li>
 
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="addedplant.php">View Plants</a></li>
+
+																		<li><a href="addcategory.php">Add Category</a></li>
+
+                                    <li><a href="logininformations.php">View Users</a></li>
+
+																		<li><a href="report1.php">Reports</a></li>
+
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -155,68 +162,7 @@ if(isset($_SESSION['id']))
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Service Area Start ##### -->
-    <section class="our-services-area bg-gray section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center">
-                        <h2>OUR SERVICES</h2>
-                        <p>We provide the perfect service for you.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-5">
-                    <div class="alazea-service-area mb-100">
-
-                        <!-- Single Service Area -->
-                        <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
-                            <!-- Icon -->
-                            <div class="service-icon mr-30">
-                                <img src="img/core-img/s1.png" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="service-content">
-                                <h5>Plants Care</h5>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
-                            <!-- Icon -->
-                            <div class="service-icon mr-30">
-                                <img src="img/core-img/s2.png" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="service-content">
-                                <h5>Pest Control</h5>
-
-                            </div>
-                        </div>
-
-                        <!-- Single Service Area -->
-                        <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="500ms">
-                            <!-- Icon -->
-                            <div class="service-icon mr-30">
-                                <img src="img/core-img/s3.png" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="service-content">
-                                <h5>Landscaping</h5>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
     <!-- ##### Service Area End ##### -->
 
     <!-- ##### About Area Start ##### -->
@@ -250,7 +196,7 @@ if(isset($_SESSION['id']))
 
             <div class="row">
 
-							
+
 
                 <!-- Single Product Area -->
                 <div class="col-12 col-sm-6 col-lg-3">
@@ -342,14 +288,6 @@ if(isset($_SESSION['id']))
                     </div>
                 </div>
 
-                <div class="col-12 text-center">
-<a href="addplant.php" class="btn alazea-btn">click to add plants</a>                </div>
-<div class="col-12 text-center">
-<a href="addedplant.php" class="btn alazea-btn">click to view added plants</a>                </div>
-                <div class="col-12 text-center">
-<a href="addcategory.php" class="btn alazea-btn">click to add category</a>                </div>
-<div class="col-12 text-center">
-<a href="logininformations.php" class="btn alazea-btn">registered users</a>                </div>
             </div>
         </div>
     </section>

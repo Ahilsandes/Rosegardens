@@ -49,26 +49,30 @@ if(isset($_SESSION['id']))
 			    <!-- Top Header Content -->
                             <div class="top-header-meta d-flex">
 															<!-- Top Header Content -->
-	                            <div class="top-header-meta d-flex">
+															<div class="top-header-meta d-flex">
 
 	                                <div class="login">
-	                                    <a href="index.html"> <span>Home</span></a>
+	                                    <a href="admin-index.php"> <span>Home</span></a>
 	                                </div>
 	                                <div class="login">
-	                                    <a href="about.html"> <span>About</span></a>
+	                                    <a href="addplant.php"> <span>Add Plants</span></a>
 	                                </div>
 	                                <div class="login">
-	                                    <a href="shop.html"> <span>Shop</span></a>
+	                                    <a href="addedplant.php"> <span>View Plants</span></a>
 	                                </div>
 	                                <div class="login">
-	                                    <a href="contact.html"> <span>Contact</span></a>
+	                                    <a href="addcategory.php"> <span>Add Category</span></a>
 	                                </div>
-
-																  </div>
+	                                <div class="login">
+	                                    <a href="logininformations.php"> <span>View Users</span></a>
+	                                </div>
+	                                <div class="login">
+	                                    <a href="report1.php"> <span>Reports</span></a>
+	                                </div>
 
                                 <!-- Login -->
                                 <div class="login">
-                                    <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                    <a href="logout.php" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">

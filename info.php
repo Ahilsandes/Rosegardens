@@ -57,11 +57,11 @@ if(isset($_SESSION['id']))
                                       <a href="logininformations.php"> <span>View Users</span></a>
                                   </div>
                                   <div class="login">
-                                      <a href="report1.php"> <span>Reports</span></a>
+                                      <a href="#"> <span>Reports</span></a>
                                   </div>
                                   <!-- Login -->
                                   <div class="login">
-                                      <a href="logout.php" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                      <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
                                   </div>
                                   <!-- Cart -->
                                   <div class="cart">
@@ -139,25 +139,12 @@ if(isset($_SESSION['id']))
 
 
 <div class="container" style="text-align: center; padding-left:350px; color:black">
-  <?php
-  $sql1="select * from tbl_register";
-  $res1=mysqli_query($con,$sql1);
-  echo "<table class='table table-responsive' id='tbl' class='table' style='display:block;'>";
-  echo "<tr>";
-  echo"<th>First Name</th>";
-  echo"<th>Last Name</th>";
-  echo"<th>E-mail</th>";
-  echo"<th>Phone</th>";
-  echo"</tr>";
-  while($row=mysqli_fetch_array($res1))
-  {
-  echo"<tr >";
-  echo"<td>",$row['fname'],"</td><td>&nbsp;",$row['lname'],"</td><td>&nbsp;",$row['email'],"</td><td>&nbsp;",$row['phone'],"</td>";
-  echo"</tr>";
 
-  }
-  echo"  </table>";
-  ?>
+// CONTENTS TO BE DISPLAYED
+
+
+
+
 </div>
 
 

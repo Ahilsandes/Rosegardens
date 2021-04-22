@@ -10,10 +10,30 @@ if(isset($_SESSION['id']))
     <title> ROSE GARDENS </title>
 	<link rel="icon" href="img/core-img/favicon.ico">
 	<link rel="stylesheet" href="style.css">
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+.button1 {font-size: 10px;}
+.center {
+  margin: auto;
+  width: 50%;
+
+}
+</style>
 </head>
 
 <body>
+
 
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
@@ -57,11 +77,11 @@ if(isset($_SESSION['id']))
                                       <a href="logininformations.php"> <span>View Users</span></a>
                                   </div>
                                   <div class="login">
-                                      <a href="report1.php"> <span>Reports</span></a>
+                                      <a href="#"> <span>Reports</span></a>
                                   </div>
                                   <!-- Login -->
                                   <div class="login">
-                                      <a href="logout.php" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                      <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
                                   </div>
                                   <!-- Cart -->
                                   <div class="cart">
@@ -106,7 +126,7 @@ if(isset($_SESSION['id']))
 
                     <!-- Search Form -->
                     <div class="search-form">
-                        <form action="#" method="get">
+                        <form action="#" method="post">
                             <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
                             <button type="submit" class="d-none"></button>
                         </form>
@@ -123,7 +143,7 @@ if(isset($_SESSION['id']))
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-            <h2>USER DETAILS</h2>
+            <h2>CHANGE PASSWORD</h2>
         </div>
 
     </div>
@@ -131,40 +151,39 @@ if(isset($_SESSION['id']))
 <br>
 <br>
 <center>
+    <form action="tochangepass.php" method="post">
+  <div class="container" >
+    <div class="row">
+      <div class="col" style="color:green ;padding-bottom: 20px;">
+          Old Password
+      </div>
+      <div class="col">
+        <input type="text" id="passname1" name="oldpassword" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="color:green ;padding-bottom:20px;">
+          New Password
+      </div>
+      <div class="col">
+        <input type="text" id="passname2" name="passname2" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="color:green ;padding-bottom:20px;">
+          Confirm Password
+      </div>
+      <div class="col">
+        <input type="text" id="passname3" name="confirmpassword" class="form-control">
+      </div>
+    </div>
 
+    </div>
 
-
-
-
-
-
-<div class="container" style="text-align: center; padding-left:350px; color:black">
-  <?php
-  $sql1="select * from tbl_register";
-  $res1=mysqli_query($con,$sql1);
-  echo "<table class='table table-responsive' id='tbl' class='table' style='display:block;'>";
-  echo "<tr>";
-  echo"<th>First Name</th>";
-  echo"<th>Last Name</th>";
-  echo"<th>E-mail</th>";
-  echo"<th>Phone</th>";
-  echo"</tr>";
-  while($row=mysqli_fetch_array($res1))
-  {
-  echo"<tr >";
-  echo"<td>",$row['fname'],"</td><td>&nbsp;",$row['lname'],"</td><td>&nbsp;",$row['email'],"</td><td>&nbsp;",$row['phone'],"</td>";
-  echo"</tr>";
-
-  }
-  echo"  </table>";
-  ?>
-</div>
-
-
-
-
-
-
+    <div class="center"  style="padding-top:20px; align:center;">
+  <input type="submit" class="button button1" name="cpass" value="change">
+    </div>
+</form>
 </center>
 
 

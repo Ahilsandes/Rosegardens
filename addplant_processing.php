@@ -32,7 +32,7 @@ move_uploaded_file($_FILES['file1']['tmp_name'],$target_path);
     require("dbconnection.php");
 $q="INSERT INTO `tbl_plant`( `user_id`, `Plant_name`, `Plant_category`, `Plant_description`, `Plant_amount`, `Status`, `Image1`) VALUES
 ($user_id,'$Plant_name', $Plant_category,'$Plant_description',$Plant_amount, 1, '$file')";
- mysqli_query($con, $q) or  die("RESULT KITTILA<br>$q");
+ mysqli_query($con, $q) or  die("RESULT will not get<br>$q");
 mysqli_close($con);
   header("Location: addedplant.php");
 }
