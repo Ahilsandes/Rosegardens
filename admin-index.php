@@ -54,7 +54,7 @@ if(isset($_SESSION['id']))
 																	Welcome
 
 																		<a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
-																		<a href="change password.php"> Change password?</a>
+																		<a href="change password.php"> Change password?  </a>
                                 </div>
 
                             </div>

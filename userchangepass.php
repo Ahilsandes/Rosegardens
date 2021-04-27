@@ -55,48 +55,60 @@ if(isset($_SESSION['id']))
                                 <a href="#" data-toggle="tooltip" data-placement="bottom" title="rosegardens@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: rosegardens@gmail.com</span></a>
 
                             </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                            <div class="alazea-main-menu">
+                                <div class="classy-nav-container breakpoint-off">
+                                    <div class="container">
 
-                            <!-- Top Header Content -->
-                            <div class="top-header-meta d-flex">
-                              <!-- Top Header Content -->
-                              <div class="top-header-meta d-flex">
-
-                                  <div class="login">
-                                      <a href="admin-index.php"> <span>Home</span></a>
-                                  </div>
-                                  <div class="login">
-                                      <a href="addplant.php"> <span>Add Plants</span></a>
-                                  </div>
-                                  <div class="login">
-                                      <a href="addedplant.php"> <span>View Plants</span></a>
-                                  </div>
-                                  <div class="login">
-                                      <a href="addcategory.php"> <span>Add Category</span></a>
-                                  </div>
-                                  <div class="login">
-                                      <a href="logininformations.php"> <span>View Users</span></a>
-                                  </div>
-                                  <div class="login">
-                                      <a href="#"> <span>Reports</span></a>
-                                  </div>
-                                  <!-- Login -->
-                                  <div class="login">
-                                      <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
-                                  </div>
-                                  <!-- Cart -->
-                                  <div class="cart">
-                                      <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
-                                  </div>
+                                        <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
 
 
 
+
+                                            <div class="classy-navbar-toggler">
+                                                <span class="navbarToggler"><span></span><span></span><span></span></span>
+                                            </div>
+
+
+                                            <div class="classy-menu">
+
+
+                                                <div class="classycloseIcon">
+                                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                                </div>
+
+
+                                                <div class="classynav">
+                                                    <ul>
+                                                        <li><a href="user-index.php">Home</a></li>
+                                                        <li><a href="about.php">About</a></li>
+
+                                                        <li><a href="shop.php">Shop</a></li>
+
+                                                        <li><a href="contact.php">Contact</a></li>
+                                                    </ul>
+
+
+                                                    <div id="searchIcon">
+                                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </nav>
+
+
+
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
 
         <!-- ***** Navbar Area ***** -->
         <div class="alazea-main-menu">
@@ -125,14 +137,7 @@ if(isset($_SESSION['id']))
                     </nav>
 
                     <!-- Search Form -->
-                    <div class="search-form">
-                        <form action="#" method="post">
-                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
-                            <button type="submit" class="d-none"></button>
-                        </form>
-                        <!-- Close Icon -->
-                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
-                    </div>
+
                 </div>
             </div>
         </div>

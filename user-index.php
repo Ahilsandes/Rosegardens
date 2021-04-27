@@ -3,6 +3,13 @@ session_start();
 if(isset($_SESSION['id']))
 {
 	?>
+<?php
+require('dbconnection.php');
+$q2="SELECT * FROM `tbl_plant` WHERE `Status`=1";
+$result=mysqli_query($con,$q2);
+
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +23,7 @@ if(isset($_SESSION['id']))
     <title>ROSE GARDENS</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/favicon.ico"></link>
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -46,16 +53,18 @@ if(isset($_SESSION['id']))
                                 <a href="#"  title="rosegardens@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: rosegardens@gmail.com</span></a>
                                 <a href="#"  title="+919961466935"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +919961466935</span></a>
                             </div>
-			    <!-- Top Header Content -->
+                <!-- Top Header Content -->
                             <div class="top-header-meta d-flex">
 
                                 <!-- Login -->
                                 <div class="login">
 																	Welcome
-                                    <a href="#" onclick="logout()"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+                                    <a href="#" onclick="logout()" ><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
+																		<a href="userchangepass.php"> Change password?  </a>
                                 </div>
+
                                 <!-- Cart -->
-                                <div class="cart">
+                                <div class="cart" style="padding-left:10px">
                                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
                                 </div>
                             </div>
@@ -94,12 +103,12 @@ if(isset($_SESSION['id']))
                             <!-- Navbar Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="user-index.php">Home</a></li>
+                                    <li><a href="about.php">About</a></li>
 
-                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop.php">Shop</a></li>
 
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -128,7 +137,7 @@ if(isset($_SESSION['id']))
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
-    <section class=	"hero-area">
+    <section class= "hero-area">
         <div class="hero-post-slides owl-carousel">
 
             <!-- Single Hero Post -->
@@ -226,7 +235,7 @@ if(isset($_SESSION['id']))
     <!-- ##### About Area End ##### -->
 
     <!-- ##### Portfolio Area Start ##### -->
-    <section class="alazea-portfolio-area section-padding-100-0">
+  <!--   <section class="alazea-portfolio-area section-padding-100-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -236,7 +245,7 @@ if(isset($_SESSION['id']))
         </div>
 
 
-    </section>
+    </section> -->
 
     <section class="new-arrivals-products-area bg-gray section-padding-100">
         <div class="container">
@@ -251,107 +260,76 @@ if(isset($_SESSION['id']))
             </div>
 
             <div class="row">
-
+<?php while ($row = mysqli_fetch_array($result)){ ?>
                 <!-- Single Product Area -->
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
+                     <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <a href="shop-details.html"><img src="img/bg-img/cactus.jpg" alt=""></a>
-                            <!-- Product Tag -->
+                            <a href="shop-details.html"><img src="<?php echo 'uploads/'.$row['Image1']; ?>" alt=""></a>
 
                             <div class="product-meta d-flex">
                                 <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
                                 <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+
                             </div>
                         </div>
                         <!-- Product Info -->
                         <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Cactus Flower</p>
+                            <a href="#">
+                                <p><?php echo $row['Plant_name']; ?></p>
                             </a>
-                            <h6>500/-</h6>
+                            <h6><?php echo $row['Plant_amount']; ?>/-</h6>
+                            <h6><?php echo $row['Plant_description']; ?></h6>
+                            <h6><?php echo $row['Plant_height']; ?></h6>
+                            <h6><?php echo $row['Common_name']; ?></h6>
+                            <h6><?php echo $row['Bloom_time']; ?></h6>
+                            <h6><?php echo $row['Flower_colour']; ?></h6>
+                            <h6><?php echo $row['Planting_care']; ?></h6>
                         </div>
                     </div>
                 </div>
 
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="200ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="img/bg-img/begonias.jpg" alt=""></a>
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Begonias Flower</p>
-                            </a>
-                            <h6>500/-</</h6>
-                        </div>
-                    </div>
+<?php
+}
+?>
+
+
+                <div class="col-12 text-center">
+                    <a href="#" class="btn alazea-btn">View All</a>
                 </div>
-
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="img/bg-img/bambooplant.jpg" alt=""></a>
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>Bambooplant</p>
-                            </a>
-                            <h6>500/-</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Product Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="400ms">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <a href="shop-details.html"><img src="img/bg-img/african daisy.jpg" alt=""></a>
-                            <!-- Product Tag -->
-
-                            <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Info -->
-                        <div class="product-info mt-15 text-center">
-                            <a href="shop-details.html">
-                                <p>African daisy</p>
-                            </a>
-                            <h6>500/-</h6>
-                        </div>
-                    </div>
-                </div>
-								<div class="col-12 text-center">
-										<a href="addedplant.php" class="btn alazea-btn">View All</a>
-								</div>
-
-
-
             </div>
         </div>
     </section>
+    <?php
+  }
+    else
+    {
+    	header("location:index.php");
+    }
+?>
+
+    <script>
+     function logout()
+     {
+             var x=confirm("Click ok  to logout");
+             if(x===true)
+             {
+
+
+                 window.location.assign("logout.php");
+
+
+             }
+             else
+             {
+                 return false;
+             }
+     }
+     </script>
+
+
+
     <!-- ##### Product Area End ##### -->
 
     <!-- ##### Blog Area Start ##### -->
@@ -366,20 +344,14 @@ if(isset($_SESSION['id']))
     <script src="js/plugins/plugins.js"></script>
 
     <script src="js/active.js"></script>
+
 </body>
 
 </html>
-<?php
-}
-else
-{
-	header("location:login.html");
-}
-?>
 <script>
  function logout()
  {
-         var x=confirm("Click here to logout");
+         var x=confirm("Click ok  to logout");
          if(x===true)
          {
 

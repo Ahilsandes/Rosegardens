@@ -5,6 +5,6 @@
                         if(isset($_SESSION['id']))
                      {
                          session_destroy();
-                         header('Location: user-index.php');
+                         header('Location: index.php');
                     }
                     ?>

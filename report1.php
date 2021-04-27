@@ -67,39 +67,40 @@
 
   <div class="container" id="d1">
    <h1 style="text-align: center;padding: 10px;">REPORTS ON ALL PLANTS</h1>
-<?php
-  require('dbconnection.php');
-  $q2="SELECT * FROM `tbl_plant` WHERE `Status`=1";
-  $result=mysqli_query($con,$q2);
-?>
+
   <table id="plant">
 
   <tr> <th> Plant ID</th>
-  <th>Plant Name</th></tr>
+  <th>Plant Name</th>
+  <th>Plant Category</th>
+  <th>Plant description</th>
+  <th>Plant Amount</th>
+  </tr>
 
-<?php // start a table tag in the HTML
+  <?php
+    require('dbconnection.php');
+    $q2="SELECT * FROM `tbl_plant` ";
+    $result=mysqli_query($con,$q2);
+   // start a table tag in the HTML
   while ($row = mysqli_fetch_array($result)){
   if ($result->num_rows > 0) {
       // output data of each row
-      while($row = $result->fetch_assoc())
-      {
-        echo "<tr><td>" . $row['Plant_id'] . "</td><td>" . $row['Plant_name'] . "</td></tr>";
+
+        echo "<tr><td>" . $row['Plant_id'] . "</td><td>" . $row['Plant_name'] . "</td><td>".$row['Plant_category']."</td>
+        <td>".$row['Plant_description']."</td><td>".$row['Plant_amount']."</td></tr>";
       }
+    }
       echo "</table>";
-       }
-      else
-      {
-        echo "0 results";
-      }
+
 ?></div>
 <div style="padding: 20px;">
-  <center><button class="btn" id="btnExport" ><i class="fa fa-download"></i> Export</button></center>
+  <center><button class="btn" id="btnExport" ><i class="fa fa-download"></i> Print</button></center>
 
 
 
 </div>
 <?php
-  }
+
 ?>
 <script type="text/javascript">
         $("body").on("click", "#btnExport", function () {
@@ -112,7 +113,7 @@
                             width: 500
                         }]
                     };
-                    pdfMake.createPdf(docDefinition).download("customer-details.pdf");
+                    pdfMake.createPdf(docDefinition).download("plantreport.pdf");
                 }
             });
         });

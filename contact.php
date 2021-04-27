@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['id']))
+{
+	?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +52,7 @@
                                 </div>
                                 <!-- Login -->
                                 <div class="login">
-                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>Login</span></a>
+                                    <a href="logout.php"><i class="fa fa-user" aria-hidden="true"></i> <span>Logout</span></a>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">
@@ -84,12 +90,12 @@
                             <!-- Navbar Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="user-index.php">Home</a></li>
+                                    <li><a href="about.php">About</a></li>
 
                                     <li><a href="shop.php">Shop</a></li>
 
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -161,6 +167,33 @@
             </div>
         </div>
     </div>
+    <?php
+  }
+    else
+    {
+    	header("location:index.php");
+    }
+?>
+    <script>
+     function logout()
+     {
+             var x=confirm("Click ok  to logout");
+             if(x===true)
+             {
+
+
+                 window.location.assign("logout.php");
+
+
+             }
+             else
+             {
+                 return false;
+             }
+     }
+     </script>
+
+
     <!-- ##### Contact Area Info End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
