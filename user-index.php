@@ -67,6 +67,7 @@ $result=mysqli_query($con,$q2);
                                 <div class="cart" style="padding-left:10px">
                                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
                                 </div>
+																
                             </div>
 
 

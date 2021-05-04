@@ -9,13 +9,7 @@ if(
   !isset($_POST['Plant_amount'])
   )
   die('invalid data');
-/*elseif(
-  !isset($_FILES['Image1']['name'])){
-    die('invalid data');
-  }
-  elseif($_FILES['Image1']['type']!="image/jpeg"){
-    die('invalid file type');
-  }*/
+
   else{
 
 //MOVE UPLOADED IMAGE TO DB FOLDERS

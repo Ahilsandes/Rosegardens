@@ -242,3 +242,11 @@ else
 header("location:login.html");
 }
 ?>
+<div class="input-group" style="color: green;">
+  <h6>GENDER</h6>
+  <input type="radio" id ="male" name="gender" value="MALE">
+  <label for="male">MALE</label>
+  <input type="radio" id ="female" name="gender" value="FEMALE">
+  <label for="female">FEMALE</label>
+
+</div>

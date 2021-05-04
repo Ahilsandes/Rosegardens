@@ -133,11 +133,6 @@ if(isset($_SESSION['id']))
 <center>
 
 
-
-
-
-
-
 <div class="container" style="text-align: center; padding-left:350px; color:black">
   <?php
   $sql1="select * from tbl_register";
@@ -151,7 +146,7 @@ if(isset($_SESSION['id']))
   echo"</tr>";
   while($row=mysqli_fetch_array($res1))
   {
-  echo"<tr >";
+  echo"<tr>";
   echo"<td>",$row['fname'],"</td><td>&nbsp;",$row['lname'],"</td><td>&nbsp;",$row['email'],"</td><td>&nbsp;",$row['phone'],"</td>";
   echo"</tr>";
 

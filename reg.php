@@ -12,8 +12,7 @@ $role="user";
 $sql1="insert into tbl_login(role,username,password,status) values('$role','$username','$password','1')";
         mysqli_query($con,$sql1);
         $n=mysqli_insert_id($con);
-        $sql="insert into tbl_register(login_id,fname,lname,email,phone)
-        values('$n','$fname','$lname','$email','$phone_no')";
+        $sql="insert into tbl_register(login_id,fname,lname,email,phone)values('$n','$fname','$lname','$email','$phone_no')";
         if(mysqli_query($con,$sql))
         {
                 header("location:login.html");

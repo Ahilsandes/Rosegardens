@@ -183,7 +183,7 @@ if ($_SESSION["role"]!="admin")
       </tr>
       <tr>
         <th scope="row"style="color: green;"><label for="pdesc">Flower colour:</label></th>
-        <td><input type="text" id="pdesc" name="Flower_colour" class="form-control"></td>
+        <td><input type="text" id="pdesc" name="Flower_colour" class="form-control" placeholder="Type something"></td>
       </tr>
       <tr>
         <th scope="row"style="color: green;"><label for="pdesc">Planting and care:</label></th>
